@@ -1,0 +1,747 @@
+<index.html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <title>La Maison des Brumes — Love room romantique à Cestas, près de Bordeaux</title>
+  <meta name="description" content="La Maison des Brumes, espace privatif à Cestas, Gironde. Un lieu pensé pour se retrouver à deux — élégant, sensuel, discret. Aux portes de Bordeaux. Exclusivement 18+." />
+  <link rel="canonical" href="https://www.lamaisondesbrumes.fr/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="La Maison des Brumes — Love room à Cestas, près de Bordeaux" />
+  <meta property="og:description" content="Un espace privatif pensé pour se retrouver à deux. Discret, élégant, différent. À Cestas, aux portes de Bordeaux. Exclusivement 18+." />
+  <meta property="og:image" content="PHOTO_01_HERO.jpg" />
+  <meta property="og:url" content="https://www.lamaisondesbrumes.fr/" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="La Maison des Brumes — Love room près de Bordeaux" />
+  <meta name="twitter:description" content="Un espace privatif pensé pour se retrouver à deux. Discret, élégant, différent. Cestas, Gironde." />
+  <meta name="twitter:image" content="PHOTO_01_HERO.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "La Maison des Brumes",
+    "description": "Espace privatif conçu pour les couples. Situé à Cestas, aux portes de Bordeaux, en Gironde. Exclusivement réservé aux adultes.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cestas",
+      "addressRegion": "Gironde",
+      "addressCountry": "FR"
+    },
+    "email": "maisondesbrumes@gmail.com",
+    "url": "https://www.lamaisondesbrumes.fr/",
+    "amenityFeature": [
+      {"@type":"LocationFeatureSpecification","name":"Entrée autonome","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Lit queen-size","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Cuisine équipée","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Douche à l'italienne","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Stationnement sur propriété","value":true}
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@400;500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E8C96A;
+      --gold-dark: #9A7A30;
+      --black: #0A0A0A;
+      --dark: #101010;
+      --dark2: #161616;
+      --text: #D4C5A0;
+      --muted: #7A6A50;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --display: 'Cinzel', 'Palatino Linotype', serif;
+      --sans: 'Montserrat', Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--text); font-family: var(--serif); font-weight: 300; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    a { text-decoration: none; color: inherit; }
+
+    #particles-canvas { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.4rem 3rem; display: flex; align-items: center; justify-content: space-between; background: linear-gradient(to bottom, rgba(10,10,10,.92), transparent); transition: background .4s; }
+    nav.scrolled { background: rgba(10,10,10,.97); }
+    .nav-logo { font-family: var(--display); font-size: .75rem; letter-spacing: .35em; color: var(--gold); text-transform: uppercase; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--sans); font-size: .58rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); transition: color .3s; }
+    .nav-links a:hover { color: var(--gold); }
+    .btn-outline { font-family: var(--sans); font-size: .6rem; letter-spacing: .25em; text-transform: uppercase; border: 1px solid var(--gold); color: var(--gold); padding: .6rem 1.6rem; transition: background .3s, color .3s; cursor: pointer; display: inline-block; position: relative; z-index: 2; }
+    .btn-outline:hover { background: var(--gold); color: var(--black); }
+
+    .hero { position: relative; height: 100svh; min-height: 600px; display: flex; align-items: flex-end; overflow: hidden; }
+    .hero-photo { position: absolute; inset: 0; background: var(--dark); z-index: 0; }
+    .hero-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,.88) 0%, rgba(10,10,10,.2) 55%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 0 4rem 5rem; max-width: 700px; }
+    .hero-eyebrow { font-family: var(--sans); font-size: .58rem; letter-spacing: .35em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
+    .hero-title { font-family: var(--display); font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 400; color: #fff; letter-spacing: .05em; line-height: 1.1; margin-bottom: 1.5rem; }
+    .hero-tagline { font-family: var(--serif); font-style: italic; font-size: clamp(1rem, 2vw, 1.2rem); color: var(--text); line-height: 1.7; max-width: 420px; margin-bottom: 2.5rem; }
+    .scroll-hint { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: .5rem; color: var(--muted); font-family: var(--sans); font-size: .52rem; letter-spacing: .2em; text-transform: uppercase; z-index: 2; }
+    .scroll-line { width: 1px; height: 36px; background: linear-gradient(to bottom, var(--gold-dark), transparent); animation: scrollpulse 2s ease-in-out infinite; }
+    @keyframes scrollpulse { 0%,100%{opacity:.3} 50%{opacity:1} }
+
+    .section { padding: 6rem 4rem; position: relative; z-index: 2; }
+    .section--dark { background: var(--dark); }
+    .section--dark2 { background: var(--dark2); }
+    .section-label { font-family: var(--sans); font-size: .52rem; letter-spacing: .4em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 1rem; }
+    h2 { font-family: var(--serif); font-weight: 300; color: var(--gold-light); line-height: 1.2; font-size: clamp(1.7rem, 3.5vw, 2.7rem); margin-bottom: 1.5rem; }
+    h3 { font-family: var(--display); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: .75rem; }
+    .gold-rule { width: 36px; height: 1px; background: var(--gold-dark); margin: 1.5rem 0; }
+    .gold-rule--center { margin: 1.5rem auto; }
+    p { font-size: .95rem; line-height: 2; color: var(--muted); }
+    p + p { margin-top: 1rem; }
+    .centered { text-align: center; }
+
+    .intro-wrap { max-width: 680px; margin: 0 auto; text-align: center; }
+    .intro-wrap p { font-size: 1.05rem; color: var(--text); }
+    .intro-accent { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--gold); margin-top: 2rem; display: block; }
+
+    .lieu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #1a1a1a; max-width: 1200px; margin: 3rem auto 0; }
+    .lieu-cell { background: var(--dark); }
+    .lieu-cell--photo { aspect-ratio: 4/3; overflow: hidden; }
+    .lieu-cell--text { padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
+    .lieu-cell--full { grid-column: 1 / -1; aspect-ratio: 21/9; overflow: hidden; }
+    .ph { width: 100%; height: 100%; background: var(--dark2); display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-size: .52rem; letter-spacing: .2em; text-transform: uppercase; color: #2a2a2a; text-align: center; flex-direction: column; gap: .5rem; min-height: 200px; }
+    .ph span { color: #3a3a3a; font-size: .68rem; }
+
+    .infos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1px; background: #1a1a1a; margin-top: 3rem; }
+    .info-item { background: var(--dark2); padding: 1.8rem 1.5rem; text-align: center; }
+    .info-item .icon { font-size: 1.1rem; margin-bottom: .6rem; color: var(--gold); }
+    .info-item .label { font-family: var(--sans); font-size: .55rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-dark); display: block; margin-bottom: .3rem; }
+    .info-item .val { font-family: var(--serif); font-size: .95rem; color: var(--text); line-height: 1.5; }
+
+    .indices-wrap { max-width: 900px; margin: 0 auto; }
+    .indice-block { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 6rem; }
+    .indice-block:last-child { margin-bottom: 0; }
+    .indice-block--reverse { direction: rtl; }
+    .indice-block--reverse > * { direction: ltr; }
+    .indice-photo { aspect-ratio: 3/4; overflow: hidden; }
+    .indice-text p { font-size: .9rem; }
+
+    .revelation-hero { position: relative; height: 70vh; overflow: hidden; z-index: 2; }
+    .revelation-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,.9) 0%, rgba(10,10,10,.3) 60%, transparent 100%); }
+    .revelation-content { position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; padding: 4rem; max-width: 640px; }
+    .revelation-content h2 { color: #fff; margin-bottom: 1rem; }
+
+    .reassurance-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 860px; margin: 2.5rem auto 0; }
+    .reassurance-card { border: 1px solid #1e1e1e; padding: 2rem; }
+    .reassurance-card h3 { margin-bottom: .75rem; }
+
+    .philo-wrap { max-width: 620px; margin: 0 auto; }
+    .philo-wrap p { font-size: 1.05rem; color: var(--text); }
+
+    .discret-items { display: flex; gap: 3rem; flex-wrap: wrap; justify-content: center; margin-top: 3rem; }
+    .discret-item { text-align: center; max-width: 180px; }
+    .discret-item .label-sm { font-family: var(--sans); font-size: .5rem; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: .5rem; }
+    .discret-item p { font-size: .78rem; line-height: 1.8; }
+
+    .tarifs-wrap { max-width: 960px; margin: 0 auto; }
+    .tarifs-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+    .tarif-block { border: 1px solid var(--gold-dark); padding: 3rem; }
+    .tarif-name { font-family: var(--display); font-size: .72rem; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; display: block; }
+    .tarif-desc { font-size: .88rem; line-height: 1.9; color: var(--muted); margin-bottom: 2rem; }
+    .tarif-items { list-style: none; margin-bottom: 2rem; }
+    .tarif-items li { font-family: var(--sans); font-size: .7rem; color: var(--muted); padding: .5rem 0; border-bottom: 1px solid #1a1a1a; display: flex; align-items: flex-start; gap: .75rem; line-height: 1.5; }
+    .tarif-items li::before { content: '—'; color: var(--gold-dark); flex-shrink: 0; }
+
+    .surm-block { border: 1px solid #1e1e1e; padding: 3rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    .surm-unit { font-family: var(--sans); font-size: .58rem; color: var(--muted); letter-spacing: .1em; display: block; margin-bottom: 1.5rem; }
+    .surm-block p { font-size: .85rem; max-width: 340px; margin: 0 auto 1rem; }
+    .surm-note { font-size: .72rem; color: var(--muted); font-style: italic; margin-top: 1.2rem; max-width: 320px; }
+
+    .faq-wrap { max-width: 760px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid #1a1a1a; }
+    .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 1.5rem 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq-question span { font-family: var(--serif); font-size: 1rem; color: var(--text); line-height: 1.5; }
+    .faq-icon { font-family: var(--sans); font-size: .9rem; color: var(--gold-dark); flex-shrink: 0; transition: transform .3s; }
+    .faq-answer { display: none; padding-bottom: 1.5rem; }
+    .faq-answer p { font-size: .88rem; line-height: 1.9; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-item.open .faq-answer { display: block; }
+
+    .finale { position: relative; height: 50vh; overflow: hidden; z-index: 2; }
+    .finale::after { content: ''; position: absolute; inset: 0; background: rgba(10,10,10,.45); }
+    .finale-content { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 1.5rem; }
+    .finale-content p { font-family: var(--serif); font-style: italic; font-size: clamp(1.1rem, 2.5vw, 1.5rem); color: #fff; max-width: 500px; line-height: 1.8; }
+
+    footer { border-top: 1px solid #1a1a1a; padding: 3rem 4rem; position: relative; z-index: 2; }
+    .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+    .footer-logo { font-family: var(--display); font-size: .9rem; letter-spacing: .35em; color: var(--gold); text-transform: uppercase; margin-bottom: .4rem; }
+    .footer-tagline { font-family: var(--serif); font-style: italic; font-size: .9rem; color: var(--muted); }
+    .footer-links { display: flex; flex-wrap: wrap; gap: .75rem 2rem; }
+    .footer-links a { font-family: var(--sans); font-size: .55rem; letter-spacing: .15em; text-transform: uppercase; color: #444; transition: color .3s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid #151515; padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-copy { font-family: var(--sans); font-size: .55rem; color: #2a2a2a; letter-spacing: .1em; }
+    .footer-adult { font-family: var(--sans); font-size: .52rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-dark); border: 1px solid #2a2a2a; padding: .3rem .8rem; }
+
+    @media (max-width: 900px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .nav-links { display: none; }
+      .section { padding: 4rem 1.5rem; }
+      .hero-content { padding: 0 1.5rem 5rem; }
+      .lieu-grid, .reassurance-grid, .tarifs-duo { grid-template-columns: 1fr; }
+      .lieu-cell--full { aspect-ratio: 16/9; }
+      .indice-block { grid-template-columns: 1fr; gap: 2rem; direction: ltr !important; }
+      .indice-block--reverse > * { direction: ltr; }
+      .revelation-content { padding: 2rem 1.5rem; }
+      footer { padding: 2rem 1.5rem; }
+      .footer-top, .footer-bottom { flex-direction: column; }
+      .footer-bottom { text-align: center; }
+      .discret-items { gap: 2rem; }
+      .infos-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .hero-title { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+<script>
+  /* ============================================================
+     CONFIGURATION CENTRALISÉE DES URLs
+     → Modifier ICI pour mettre à jour tous les boutons du site
+  ============================================================ */
+  const BOOKING_URL = "#";  // ← Remplacer par l'URL de la plateforme de réservation
+  const CUSTOM_REQUEST_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdrdOWmd0F2994DApZ7jLyXVSNjHXPFKmBz6U3fLTb_FusHag/viewform";
+</script>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Navigation principale">
+  <div class="nav-logo">La Maison des Brumes</div>
+  <ul class="nav-links">
+    <li><a href="#lieu">Le lieu</a></li>
+    <li><a href="#tarifs">Tarifs</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="cgv.html">CGV</a></li>
+    <li><a href="#" id="nav-booking">Réserver</a></li>
+  </ul>
+  <a href="#" id="nav-booking-cta" class="btn-outline">Réserver</a>
+</nav>
+
+<!-- HERO -->
+<!-- PHOTO 01 : 16:9 plein écran · Ambiance lumière tamisée chaude · Sans accessoires -->
+<section class="hero" aria-label="La Maison des Brumes — love room à Cestas">
+  <div class="hero-photo" aria-hidden="true">
+    <div class="ph"><span>PHOTO_01_HERO.jpg</span>16:9 · Ambiance · Lumière tamisée chaude</div>
+    <!-- <img src="PHOTO_01_HERO.webp" alt="La Maison des Brumes — espace privatif à Cestas, près de Bordeaux" width="1920" height="1080" fetchpriority="high" /> -->
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Cestas · Gironde · Près de Bordeaux</p>
+    <h1 class="hero-title">La Maison<br>des Brumes</h1>
+    <p class="hero-tagline">Un lieu pour deux.<br>Ce qu'on y fait ne regarde personne d'autre.</p>
+    <a href="#" id="hero-booking" class="btn-outline">Réserver une nuit</a>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span>Découvrir</span>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="section centered" aria-labelledby="intro-title">
+  <div class="intro-wrap">
+    <div class="section-label">Bienvenue</div>
+    <h2 id="intro-title">Laissez le quotidien dehors.<br><em>Ici, la parenthèse commence.</em></h2>
+    <div class="gold-rule gold-rule--center"></div>
+    <p>Une entrée autonome. Un T2 entièrement privatisé. Aucun accueil imposé, aucun programme.</p>
+    <p>Vous passez la porte, vous changez d'ambiance… et le temps d'une nuit, le reste peut attendre.</p>
+    <em class="intro-accent">Venez pour vous retrouver.<br>Et profitez simplement de ce temps à deux.</em>
+  </div>
+</section>
+
+<!-- LE LIEU -->
+<section id="lieu" class="section--dark" aria-labelledby="lieu-title" style="padding:0">
+  <div class="lieu-grid">
+
+    <!-- PHOTO 02 : 4:3 · Salon/Pièce principale · Élégant, sans accessoires -->
+    <div class="lieu-cell lieu-cell--photo" aria-label="Espace privatif — La Maison des Brumes">
+      <div class="ph"><span>PHOTO_02_APPARTEMENT.jpg</span>4:3 · Salon · Élégant</div>
+      <!-- <img src="PHOTO_02_APPARTEMENT.webp" alt="Salon de l'espace privatif — La Maison des Brumes, Cestas" width="800" height="600" loading="lazy" /> -->
+    </div>
+
+    <div class="lieu-cell lieu-cell--text">
+      <div class="section-label">Le lieu</div>
+      <h2 id="lieu-title" style="margin-bottom:1rem">Un T2 entier,<br><em>rien que pour vous.</em></h2>
+      <div class="gold-rule"></div>
+      <p>Une cuisine équipée, un salon, une douche à l'italienne et une chambre avec lit queen-size (160×200). Tout ce qu'il faut pour oublier un peu l'extérieur.</p>
+      <p>Linge de maison, produits d'accueil, enceinte Bluetooth… Vous n'avez plus qu'à poser vos affaires et profiter.</p>
+      <p style="margin-top:1.5rem;font-family:var(--sans);font-size:.62rem;letter-spacing:.15em;color:var(--gold-dark)">PENSÉ POUR DEUX · 18+ EXCLUSIVEMENT</p>
+    </div>
+
+    <div class="lieu-cell lieu-cell--text">
+      <h3>La chambre</h3>
+      <p>Un lit queen-size (160×200). Un miroir face au lit. Une lumière qui change avec l'ambiance.</p>
+      <p>Douce et chaude, presque obscure… ou rouge profond lorsque la soirée prend une autre direction.</p>
+    </div>
+
+    <!-- PHOTO 03 : portrait 3:4 · Détail soigné · Textile ou lumière -->
+    <div class="lieu-cell lieu-cell--photo" aria-label="Détail de la chambre">
+      <div class="ph"><span>PHOTO_03_DETAIL.jpg</span>3:4 · Détail soigné · Textile ou lumière</div>
+      <!-- <img src="PHOTO_03_DETAIL.webp" alt="Détail de la chambre — La Maison des Brumes" width="600" height="800" loading="lazy" /> -->
+    </div>
+
+    <!-- PHOTO 04 : 21:9 pleine largeur · Salle de bain · Lumière douce -->
+    <div class="lieu-cell lieu-cell--full" aria-label="Salle de bain">
+      <div class="ph"><span>PHOTO_04_SALLE_DE_BAIN.jpg</span>21:9 · Salle de bain · Lumière douce</div>
+      <!-- <img src="PHOTO_04_SALLE_DE_BAIN.webp" alt="Salle de bain avec douche à l'italienne — La Maison des Brumes" width="1200" height="514" loading="lazy" /> -->
+    </div>
+  </div>
+</section>
+
+<!-- INFORMATIONS PRATIQUES -->
+<section class="section section--dark2" aria-labelledby="infos-title">
+  <div style="max-width:960px;margin:0 auto">
+    <div class="section-label centered">Informations pratiques</div>
+    <h2 id="infos-title" class="centered" style="margin-bottom:0">Ce que vous trouverez.</h2>
+    <div class="infos-grid">
+      <div class="info-item">
+        <div class="icon">🛏</div>
+        <span class="label">Couchage</span>
+        <div class="val">Lit queen-size · 160×200</div>
+      </div>
+      <div class="info-item">
+        <div class="icon">🍳</div>
+        <span class="label">Cuisine</span>
+        <div class="val">Équipée · Complète</div>
+      </div>
+      <div class="info-item">
+        <div class="icon">🚿</div>
+        <span class="label">Salle de bain</span>
+        <div class="val">Douche à l'italienne</div>
+      </div>
+      <div class="info-item">
+        <div class="icon">🔑</div>
+        <span class="label">Accès</span>
+        <div class="val">Entrée autonome · Boîte à clé</div>
+      </div>
+      <div class="info-item">
+        <div class="icon">🚗</div>
+        <span class="label">Stationnement</span>
+        <div class="val">Dans la cour de la propriété</div>
+      </div>
+      <div class="info-item">
+        <div class="icon">🕚</div>
+        <span class="label">Départ</span>
+        <div class="val">Avant 11 h</div>
+      </div>
+      <!-- À COMPLÉTER : heure d'arrivée -->
+      <div class="info-item">
+        <div class="icon">💡</div>
+        <span class="label">Éclairage</span>
+        <div class="val">LED modulable · Ambiances</div>
+      </div>
+      <div class="info-item">
+        <div class="icon">🎵</div>
+        <span class="label">Son</span>
+        <div class="val">Enceinte Bluetooth</div>
+      </div>
+      <!-- À COMPLÉTER : Wi-Fi si disponible -->
+      <div class="info-item">
+        <div class="icon">🔞</div>
+        <span class="label">Accès</span>
+        <div class="val">Exclusivement 18+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREMIERS INDICES -->
+<section class="section" aria-labelledby="indices-title">
+  <div class="indices-wrap">
+    <div class="section-label">Un peu plus loin</div>
+    <h2 id="indices-title" style="max-width:480px;margin-bottom:3rem">Découvrir ensemble,<br><em>dans la douceur et la sécurité.</em></h2>
+
+    <!-- PHOTO 05 : portrait 3:4 · Détail ambigu · Intriguant -->
+    <div class="indice-block">
+      <div class="indice-photo" aria-label="Détail de La Maison des Brumes">
+        <div class="ph"><span>PHOTO_05_INDICE.jpg</span>3:4 · Détail · Intriguant</div>
+        <!-- <img src="PHOTO_05_INDICE.webp" alt="Un détail de La Maison des Brumes" width="600" height="800" loading="lazy" /> -->
+      </div>
+      <div class="indice-text">
+        <h3>À votre rythme.</h3>
+        <div class="gold-rule"></div>
+        <p>L'expérience se vit comme vous le souhaitez. Sans attente, sans performance, sans obligation.</p>
+        <p style="margin-top:1.5rem">Rien n'est obligatoire. Tout est là pour vous permettre d'explorer, si vous en avez envie.</p>
+      </div>
+    </div>
+
+    <!-- PHOTO 06 : portrait 3:4 · Éclairage rouge ou tamisé -->
+    <div class="indice-block indice-block--reverse">
+      <div class="indice-text">
+        <h3>Quand la lumière change…</h3>
+        <div class="gold-rule"></div>
+        <p>La pièce change avec elle.<br>Lumière chaude, pénombre, rouge profond…</p>
+        <p style="margin-top:1.5rem">À vous de choisir l'ambiance. Et ce que vous en faites.</p>
+      </div>
+      <div class="indice-photo" aria-label="Ambiance lumineuse de La Maison des Brumes">
+        <div class="ph"><span>PHOTO_06_INDICE_LUMIERE.jpg</span>3:4 · Éclairage rouge · Ambiance</div>
+        <!-- <img src="PHOTO_06_INDICE_LUMIERE.webp" alt="Éclairage d'ambiance — La Maison des Brumes" width="600" height="800" loading="lazy" /> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RÉVÉLATION -->
+<!-- PHOTO 07 : 16:9 plein écran · La croix visible · Traitement élégant -->
+<div class="revelation-hero" aria-labelledby="rev-title">
+  <div class="ph" style="position:absolute;inset:0;font-size:.68rem">
+    <span>PHOTO_07_REVELATION.jpg</span>16:9 · La croix visible · Traitement élégant
+  </div>
+  <!-- <img src="PHOTO_07_REVELATION.webp" alt="Espace d'exploration intime — La Maison des Brumes, Cestas" width="1920" height="1080" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" /> -->
+  <div class="revelation-content">
+    <div class="section-label">Ce que cache la maison</div>
+    <h2 id="rev-title"><em>Il y a quelque chose de plus.</em></h2>
+    <p style="color:var(--text);font-size:.95rem;line-height:2;max-width:480px">Derrière l'atmosphère du lieu se cache un espace imaginé pour explorer autrement l'intimité à deux.</p>
+    <p style="color:var(--text);font-size:.95rem;line-height:2;max-width:480px;margin-top:1rem">Une croix Saint-André, des liens, quelques accessoires… et surtout la liberté d'en faire beaucoup, un peu, ou absolument rien.</p>
+    <p style="font-family:var(--sans);font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);margin-top:2rem">Exclusivement réservé aux adultes · 18+</p>
+  </div>
+</div>
+
+<!-- ÉQUIPEMENTS -->
+<!-- PHOTO 08 : 4:3 · Accessoires posés avec soin · Suggestion élégante -->
+<section class="section--dark2" style="padding:0" aria-labelledby="equip-title">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#1a1a1a">
+    <div style="aspect-ratio:4/3;overflow:hidden" aria-label="Équipements de La Maison des Brumes">
+      <div class="ph"><span>PHOTO_08_DETAIL_LOVE_ROOM.jpg</span>4:3 · Accessoires · Suggestion élégante</div>
+      <!-- <img src="PHOTO_08_DETAIL_LOVE_ROOM.webp" alt="Équipements d'exploration — La Maison des Brumes" width="800" height="600" loading="lazy" /> -->
+    </div>
+    <div style="padding:3rem;display:flex;flex-direction:column;justify-content:center;background:var(--dark2);position:relative;z-index:2">
+      <h3 id="equip-title">Tout est là.<br>À vous d'écrire la suite.</h3>
+      <div class="gold-rule"></div>
+      <p>Des équipements choisis pour découvrir, jouer, explorer — que vous soyez curieux pour la première fois ou déjà familiers de cet univers.</p>
+      <p style="margin-top:1rem;font-style:italic;color:var(--text)">Aucune performance attendue. Aucune obligation. Seulement vos envies, vos limites et votre complicité.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HYGIÈNE & SÉCURITÉ -->
+<section class="section section--dark" aria-labelledby="reassurance-title">
+  <div class="section-label centered">Avant votre arrivée</div>
+  <h2 id="reassurance-title" class="centered">Préparé pour vous.</h2>
+  <div class="reassurance-grid">
+    <div class="reassurance-card">
+      <h3>Entre chaque séjour</h3>
+      <div class="gold-rule"></div>
+      <p>Le logement est nettoyé et préparé entre chaque séjour. Les équipements réutilisables font l'objet d'un nettoyage adapté avant l'arrivée des nouveaux occupants.</p>
+    </div>
+    <div class="reassurance-card">
+      <h3>Explorer sereinement</h3>
+      <div class="gold-rule"></div>
+      <p>Certains équipements demandent un peu plus d'attention que d'autres. Une notice de sécurité est disponible dans le logement. Leur utilisation reste entièrement facultative et relève toujours d'un choix partagé entre adultes consentants.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHIE -->
+<section class="section centered" aria-labelledby="philo-title">
+  <div class="philo-wrap">
+    <div class="section-label">Comment ça fonctionne</div>
+    <h2 id="philo-title">À votre rythme.<br><em>Vraiment.</em></h2>
+    <div class="gold-rule gold-rule--center"></div>
+    <p>Cet endroit ne vous attend pas avec un scénario préparé.</p>
+    <p>Certains viennent pour l'ambiance et restent sagement au salon. D'autres explorent tout. La plupart font quelque chose entre les deux.</p>
+    <p>Il y a une chose à retenir : parlez-vous. Avant, pendant, après. Le consentement ne casse pas le jeu — il le rend possible.</p>
+    <p style="margin-top:2rem;font-style:italic;color:var(--gold)">Le plus beau scénario reste celui que vous inventerez ensemble.</p>
+  </div>
+</section>
+
+<!-- DISCRÉTION -->
+<section class="section section--dark centered" aria-labelledby="discret-title">
+  <div class="section-label">Rien qu'à vous</div>
+  <h2 id="discret-title">Votre parenthèse<br><em>reste privée.</em></h2>
+  <div class="gold-rule gold-rule--center"></div>
+  <p style="max-width:480px;margin:0 auto">Entrée autonome, aucune réception physique imposée et un espace entièrement réservé à votre séjour.</p>
+  <div class="discret-items">
+    <div class="discret-item">
+      <span class="label-sm">✦ Entrée autonome</span>
+      <p>Vous accédez au logement sans accueil physique imposé.</p>
+    </div>
+    <div class="discret-item">
+      <span class="label-sm">✦ Stationnement dans la cour</span>
+      <p>Votre véhicule est stationné à l'intérieur de la propriété, et non dans la rue.</p>
+    </div>
+    <div class="discret-item">
+      <span class="label-sm">✦ Vie privée</span>
+      <p>Seules les informations nécessaires à votre réservation sont recueillies.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFS -->
+<section id="tarifs" class="section" aria-labelledby="tarifs-title">
+  <div class="tarifs-wrap">
+    <div class="section-label">Tarifs</div>
+    <h2 id="tarifs-title" style="margin-bottom:2rem">Une nuit, rien qu'à deux.</h2>
+    <div class="tarifs-duo">
+
+      <!-- LA NUIT -->
+      <div class="tarif-block">
+        <span class="tarif-name">La nuit</span>
+        <p class="tarif-desc">Le T2 entièrement privatisé, pour une nuit à deux.</p>
+        <ul class="tarif-items">
+          <li>T2 entièrement privatisé</li>
+          <li>Lit queen-size (160×200) · Linge de maison</li>
+          <li>Équipements de la Love Room</li>
+          <li>Ambiances lumineuses modulables</li>
+          <li>Enceinte Bluetooth</li>
+          <li>Entrée autonome</li>
+          <li>Stationnement dans la cour</li>
+          <li>Départ avant 11 h</li>
+        </ul>
+        <a href="#" id="tarif-booking" class="btn-outline">Réserver cette nuit</a>
+      </div>
+
+      <!-- SUR MESURE -->
+      <div class="surm-block">
+        <h3>Imaginez votre nuit</h3>
+        <span class="surm-unit">Sur devis</span>
+        <p>Un anniversaire. Une surprise. Une ambiance particulière. Quelques attentions préparées avant votre arrivée…</p>
+        <p>Racontez-nous ce que vous imaginez. Nous vous dirons ce qu'il est possible de créer.</p>
+        <a href="#" id="surm-cta" class="btn-outline">Imaginer ma soirée</a>
+        <p class="surm-note">Sous réserve de disponibilité, de faisabilité et du respect du règlement de l'établissement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGE FINALE -->
+<!-- PHOTO 09 : 16:9 · Ambiance finale · Désirable, sans accessoires -->
+<div class="finale" aria-hidden="true">
+  <div class="ph" style="position:absolute;inset:0;font-size:.68rem">
+    <span>PHOTO_09_AMBIANCE.jpg</span>16:9 · Ambiance finale · Désirable
+  </div>
+  <!-- <img src="PHOTO_09_AMBIANCE.webp" alt="La Maison des Brumes — ambiance" width="1920" height="1080" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" /> -->
+  <div class="finale-content">
+    <p>Il y a des endroits où l'on se souvient d'avoir été à deux.</p>
+    <a href="#" id="finale-booking" class="btn-outline">Réserver</a>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq" class="section section--dark" aria-labelledby="faq-title">
+  <div style="max-width:760px;margin:0 auto">
+    <div class="section-label">Questions fréquentes</div>
+    <h2 id="faq-title" style="margin-bottom:3rem">Ce que vous vous<br><em>demandez peut-être.</em></h2>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Faut-il connaître l'univers BDSM pour venir ?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Non. Le lieu est pensé aussi bien pour ceux qui souhaitent simplement profiter de l'ambiance que pour ceux qui souhaitent découvrir certains équipements. Aucune expérience préalable n'est nécessaire ou attendue.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Sommes-nous obligés d'utiliser les équipements ?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Non. Absolument rien n'est obligatoire. Vous êtes libres d'utiliser l'espace comme vous le souhaitez, à votre rythme.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>L'espace est-il entièrement privatif pendant le séjour ?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Oui. Pendant votre séjour, le T2 mis à disposition est entièrement réservé à votre usage et dispose de son propre accès. Vous n'y croisez personne.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>L'établissement accepte-t-il les mineurs ?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Non. Le lieu est exclusivement réservé aux personnes majeures. Aucune personne mineure ne peut accéder au logement, même temporairement ou en qualité de visiteur.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Peut-on venir à plus de deux ?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Le logement dispose de deux couchages et est conçu pour deux personnes. Toute présence d'une personne supplémentaire doit faire l'objet d'une demande et d'un accord préalable. Toute personne présente doit être majeure.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Croise-t-on quelqu'un à l'arrivée ?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>L'entrée est entièrement autonome. Les informations d'accès vous sont communiquées avant votre arrivée.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Comment sont préparés les équipements ?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Le logement est nettoyé et préparé entre chaque séjour. Les équipements réutilisables font l'objet d'un nettoyage adapté avant l'arrivée de chaque occupant.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Où se trouve le lieu ?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>À Cestas, en Gironde, aux portes de Bordeaux. L'adresse précise est communiquée après confirmation de votre réservation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">La Maison des Brumes</div>
+      <div class="footer-tagline">Cestas · Gironde · Aux portes de Bordeaux</div>
+    </div>
+    <nav class="footer-links" aria-label="Liens légaux">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="cgv.html">Conditions Générales de Vente</a>
+      <a href="reglement-interieur.html">Règlement intérieur</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="mailto:maisondesbrumes@gmail.com">Contact</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 La Maison des Brumes — Loueur en Meublé Non Professionnel (LMNP) · Cestas, Gironde</span>
+    <span class="footer-adult">Exclusivement 18+</span>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   PARTICULES DORÉES
+============================================================ */
+(function () {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+  const canvas = document.getElementById('particles-canvas');
+  const ctx = canvas.getContext('2d');
+  const isMobile = window.innerWidth < 768;
+  const TOTAL = isMobile ? 22 : 46;
+  const STAR_COUNT = Math.max(1, Math.round(TOTAL * 0.15));
+  const DOT_COUNT = TOTAL - STAR_COUNT;
+  const GOLD_COLORS = ['#C9A84C', '#E8C96A', '#9A7A30', '#d4b86a', '#b8943c'];
+  function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize, { passive: true });
+  function rand(a, b) { return a + Math.random() * (b - a); }
+  class Particle {
+    constructor(isStar) { this.isStar = isStar; this.reset(true); }
+    reset(initial) {
+      this.x = rand(0, canvas.width);
+      this.y = initial ? rand(0, window.innerHeight) : rand(-20, -2);
+      this.size = this.isStar ? rand(1.8, 3.2) : rand(0.6, 1.8);
+      this.speedY = rand(0.18, 0.55); this.speedX = rand(-0.12, 0.12);
+      this.opacity = 0; this.maxOpacity = rand(0.12, this.isStar ? 0.55 : 0.38);
+      this.fadeIn = rand(0.003, 0.008); this.fadeOut = rand(0.002, 0.006);
+      this.phase = 'in';
+      this.color = GOLD_COLORS[Math.floor(Math.random() * GOLD_COLORS.length)];
+      this.rotation = rand(0, Math.PI * 2); this.rotSpeed = rand(-0.005, 0.005);
+      this.twinkle = this.isStar ? rand(0.015, 0.04) : 0;
+      this.twinkleOffset = rand(0, Math.PI * 2); this.tick = 0;
+    }
+    update() {
+      this.y += this.speedY; this.x += this.speedX;
+      this.rotation += this.rotSpeed; this.tick++;
+      if (this.phase === 'in') { this.opacity += this.fadeIn; if (this.opacity >= this.maxOpacity) { this.opacity = this.maxOpacity; this.phase = 'hold'; } }
+      else if (this.phase === 'hold') { if (this.y > window.innerHeight * 0.72) this.phase = 'out'; }
+      else { this.opacity -= this.fadeOut; if (this.opacity <= 0) this.reset(false); }
+      if (this.y > window.innerHeight + 20) this.reset(false);
+    }
+    draw() {
+      if (this.opacity <= 0) return;
+      const alpha = this.isStar ? this.opacity * (0.7 + 0.3 * Math.sin(this.twinkleOffset + this.tick * this.twinkle)) : this.opacity;
+      ctx.save(); ctx.globalAlpha = alpha; ctx.fillStyle = this.color;
+      ctx.translate(this.x, this.y);
+      if (this.isStar) {
+        ctx.rotate(this.rotation);
+        const s = this.size;
+        ctx.beginPath();
+        for (let i = 0; i < 4; i++) {
+          const a = (i / 4) * Math.PI * 2;
+          const tx = Math.cos(a) * s * 2.4, ty = Math.sin(a) * s * 2.4;
+          const m1x = Math.cos(a + Math.PI / 4) * s * 0.35, m1y = Math.sin(a + Math.PI / 4) * s * 0.35;
+          if (i === 0) ctx.moveTo(m1x, m1y);
+          ctx.lineTo(tx, ty); ctx.lineTo(Math.cos(a + Math.PI / 2) * s * 0.35, Math.sin(a + Math.PI / 2) * s * 0.35);
+        }
+        ctx.closePath(); ctx.fill();
+      } else {
+        const g = ctx.createRadialGradient(0, 0, 0, 0, 0, this.size);
+        g.addColorStop(0, this.color); g.addColorStop(1, 'transparent');
+        ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0, 0, this.size, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.restore();
+    }
+  }
+  const particles = [];
+  for (let i = 0; i < DOT_COUNT; i++) particles.push(new Particle(false));
+  for (let i = 0; i < STAR_COUNT; i++) particles.push(new Particle(true));
+  function loop() { ctx.clearRect(0, 0, canvas.width, canvas.height); particles.forEach(p => { p.update(); p.draw(); }); requestAnimationFrame(loop); }
+  loop();
+})();
+
+/* ============================================================
+   AFFECTATION DES URLs
+============================================================ */
+document.addEventListener('DOMContentLoaded', function () {
+  const bookingIds = ['nav-booking', 'nav-booking-cta', 'hero-booking', 'tarif-booking', 'finale-booking'];
+  bookingIds.forEach(function(id) {
+    const el = document.getElementById(id);
+    if (el) { el.href = BOOKING_URL; if (BOOKING_URL !== '#') el.target = '_blank'; }
+  });
+  const surmEl = document.getElementById('surm-cta');
+  if (surmEl) { surmEl.href = CUSTOM_REQUEST_URL; if (CUSTOM_REQUEST_URL !== '#') surmEl.target = '_blank'; }
+});
+
+/* NAV scroll */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', function() { nav.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+
+/* FAQ accordéon */
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+    if (!isOpen) item.classList.add('open');
+    btn.setAttribute('aria-expanded', !isOpen);
+  });
+});
+</script>
+
+</body>
+</html>
