@@ -1,4 +1,3 @@
-<index.html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -115,11 +114,15 @@
 
     .lieu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #1a1a1a; max-width: 1200px; margin: 3rem auto 0; }
     .lieu-cell { background: var(--dark); }
-    .lieu-cell--photo { aspect-ratio: 4/3; overflow: hidden; }
+    .lieu-cell--photo { position: relative; aspect-ratio: 4/3; overflow: hidden; }
     .lieu-cell--text { padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
-    .lieu-cell--full { grid-column: 1 / -1; aspect-ratio: 21/9; overflow: hidden; }
-    .ph { width: 100%; height: 100%; background: var(--dark2); display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-size: .52rem; letter-spacing: .2em; text-transform: uppercase; color: #2a2a2a; text-align: center; flex-direction: column; gap: .5rem; min-height: 200px; }
+    .lieu-cell--full { position: relative; grid-column: 1 / -1; aspect-ratio: 21/9; overflow: hidden; }
+    .ph { position: absolute; inset: 0; width: 100%; height: 100%; background: var(--dark2); display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-size: .52rem; letter-spacing: .2em; text-transform: uppercase; color: #2a2a2a; text-align: center; flex-direction: column; gap: .5rem; }
     .ph span { color: #3a3a3a; font-size: .68rem; }
+    .hero-photo img,
+    .lieu-cell--photo img,
+    .lieu-cell--full img,
+    .indice-photo img { position: absolute; inset: 0; width: 100%; height: 100%; }
 
     .infos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1px; background: #1a1a1a; margin-top: 3rem; }
     .info-item { background: var(--dark2); padding: 1.8rem 1.5rem; text-align: center; }
@@ -132,7 +135,7 @@
     .indice-block:last-child { margin-bottom: 0; }
     .indice-block--reverse { direction: rtl; }
     .indice-block--reverse > * { direction: ltr; }
-    .indice-photo { aspect-ratio: 3/4; overflow: hidden; }
+    .indice-photo { position: relative; aspect-ratio: 3/4; overflow: hidden; }
     .indice-text p { font-size: .9rem; }
 
     .revelation-hero { position: relative; height: 70vh; overflow: hidden; z-index: 2; }
@@ -422,9 +425,9 @@
 <!-- PHOTO 08 : 4:3 · Accessoires posés avec soin · Suggestion élégante -->
 <section class="section--dark2" style="padding:0" aria-labelledby="equip-title">
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#1a1a1a">
-    <div style="aspect-ratio:4/3;overflow:hidden" aria-label="Équipements de La Maison des Brumes">
+    <div style="position:relative;aspect-ratio:4/3;overflow:hidden" aria-label="Équipements de La Maison des Brumes">
       <div class="ph"><span>PHOTO_08_DETAIL_LOVE_ROOM.jpg</span>4:3 · Accessoires · Suggestion élégante</div>
-      <img src="PHOTO_08_DETAIL_LOVE_ROOM.jpg" alt="Équipements d'exploration — La Maison des Brumes" width="800" height="600" loading="lazy" />
+      <img src="PHOTO_08_DETAIL_LOVE_ROOM.jpg" alt="Équipements d'exploration — La Maison des Brumes" width="800" height="600" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
     </div>
     <div style="padding:3rem;display:flex;flex-direction:column;justify-content:center;background:var(--dark2);position:relative;z-index:2">
       <h3 id="equip-title">Tout est là.<br>À vous d'écrire la suite.</h3>
